@@ -1,0 +1,60 @@
+<h2>Lets see how well we would work together!</h2>
+<div class="container">
+    
+    <form [formGroup]="quizRef" (ngSubmit)="checkAnswers()">
+        <h1>Please answer these questions honestly. </h1>
+        <div class="radio">
+            <p>How much of the time are you willing to travel?</p>
+            <label for="q1" *ngFor="let q1 of q1Choices">
+                <input formControlName="q1" [value]="q1" ngModle type="radio"> {{q1}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>Are you willing to relocate?</p>
+            <label for="q2" *ngFor="let q2 of q2Choices">
+                <input formControlName="q2" [value]="q2" ngModle type="radio"> {{q2}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>How do you prefer to work?</p>
+            <label for="q3" *ngFor="let q3 of q3Choices">
+                <input formControlName="q3" [value]="q3" ngModle type="radio"> {{q3}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>Would you be willing to work remotely?</p>
+            <label for="q4" *ngFor="let q4 of q4Choices">
+                <input formControlName="q4" [value]="q4" ngModle type="radio"> {{q4}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>How many hours a week are you looking to work?</p>
+            <label for="q5" *ngFor="let q5 of q5Choices">
+                <input formControlName="q5" [value]="q5" ngModle type="radio"> {{q5}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>How many years of professional experience do you have?</p>
+            <label for="q6" *ngFor="let q6 of q6Choices">
+                <input formControlName="q6" [value]="q6" ngModle type="radio"> {{q6}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>How do you plan on getting to work?</p>
+            <label for="q7" *ngFor="let q7 of q7Choices">
+                <input formControlName="q7" [value]="q7" ngModle type="radio"> {{q7}}
+            </label>
+        </div>
+        <div class="radio">
+            <p>Please rate your coding skills on a scale from 1-5, 1 bieng the lowest and 5 being the highest.</p>
+            <label for="q8" *ngFor="let q8 of q8Choices">
+                <input formControlName="q8" [value]="q8" ngModle type="radio"> {{q8}}
+            </label>
+        </div>
+        <div class="buttonStyle">
+        <button class="submit" type="subit">Submit!</button>
+        </div>
+       
+    </form>
+</div>
+
